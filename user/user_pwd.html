@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 导入layUI的css文件 -->
+    <link rel="stylesheet" href="../layui-v2.6.7/layui/css/layui.css">
+    <!-- 导入自己的css文件 -->
+    <link rel="stylesheet" href="../assets/css/user/user_pwd.css">
+</head>
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">设置密码</div>
+        <div class="layui-card-body">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                  <label class="layui-form-label">原密码</label>
+                  <div class="layui-input-block">
+                    <input type="password" name="password" required  lay-verify="required|pass" placeholder="请输入原密码" autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                  <label class="layui-form-label">新密码</label>
+                  <div class="layui-input-inline">
+                    <input type="password" name="newpassword" required lay-verify="required|pass|samePwd" placeholder="请输入新密码" autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码</label>
+                    <div class="layui-input-inline">
+                      <input type="password" name="repassword" required lay-verify="required|pass|repwd" placeholder="请再次输入新密码" autocomplete="off" class="layui-input">
+                    </div>
+                  </div>
+                  <div class="layui-form-item">
+                    <div class="layui-input-block">
+                      <button class="layui-btn" lay-submit lay-filter="formDemo">修改密码</button>
+                      <button type="reset" class="layui-btn layui-btn-primary btnResert">重置</button>
+                    </div>
+                  </div> 
+            </form>
+        </div>
+      </div>
+    
+    <!-- 导入jQuery的js文件 -->
+    <script src="../assets/lib/jquery.js"></script>
+    <!-- 导入layUI的js文件 -->
+    <script src="../layui-v2.6.7/layui/layui.js"></script>
+    <!-- 导入baseapi的js文件 -->
+    <script src="../assets/js/baseAPI.js"></script>
+    <!-- 导入自己的js文件 -->
+    <script src="../assets/js/user/user_pwd.js"></script>
+</body>
+</html>
