@@ -3,6 +3,7 @@ $(function () {
     getUserInfo();
 
     var layer = layui.layer;
+    var element = layer.element;
     //注册点击退出事件；
     $('.loGout').on('click',function() {
         //提示用户是否确定退出；
@@ -55,4 +56,17 @@ function getUserInfo() {
         var first = name[0].toUpperCase();
         $('.text-avatar').html(first).show();
     }
-  }
+
+    layui.use('element', function(){
+      var element = layui.element;
+      
+      //一些事件触发
+      element.on('tab(filter)', function(data){
+        console.log(this); //当前Tab标题所在的原始DOM元素
+        console.log(data.index); //得到当前Tab的所在下标
+        console.log(data.elem); //得到当前的Tab大容器
+      });
+    });
+        
+    
+}
